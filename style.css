@@ -1,19 +1,28 @@
 * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: transparent;
+  font-family: inherit;
+  text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #138073;
 }
 
-legend {
+.title {
+  border: 1px solid fuchsia;
   font-size: 24px;
   letter-spacing: 0.2em;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 form {
   position: relative;
-  background-color: #e6e6e6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,56 +38,86 @@ form {
 
 form input {
   display: block;
-  width: max;
+  width: 100%;
   height: 64px;
   margin: 15px 30px;
   padding-left: 20px;
-  color: #c5c226;
+  background-color: white;
+  border: 1px solid grey;
+  color: #138073;
+}
+
+form input ::-webkit-input-placeholder {
+  color: #138073;
+  opacity: 1;
+}
+
+form input :-ms-input-placeholder {
+  color: #138073;
+  opacity: 1;
+}
+
+form input ::-ms-input-placeholder {
+  color: #138073;
+  opacity: 1;
+}
+
+form input ::placeholder {
+  color: #138073;
+  opacity: 1;
 }
 
 form input[type='checkbox'] {
+  margin: auto;
   display: inline;
   width: 20px;
   height: 20px;
 }
 
-form input label {
-  display: inline;
-  margin: 0;
+form .checkCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-form spam.dataCkeck {
+form .checkCont label {
+  display: inline;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+form .checkCont label spam.dataCkeck {
   text-decoration: underline;
 }
 
 form button {
-  width: 150px;
-  height: 64px;
+  padding: 2em 5em;
   background-color: #39b69f;
   border: none;
-  margin: 10px;
+  margin: 20px;
   font-size: 12px;
   letter-spacing: 0.2em;
   color: white;
 }
 
-@media screen and (max-width: 480px) {
-  bo legend {
-    text-align: right;
+@media screen and (max-width: 380px) {
+  body {
+    background-color: #e6e6e6;
   }
-  form {
+  body .title {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  body form {
     width: 100%;
     padding: 100px 30px 50px;
   }
-  form input {
+  body form input {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 481px) {
-  legend {
-    text-align: center;
-  }
+@media screen and (min-width: 381px) {
   form {
     width: 80%;
     left: 50%;
@@ -87,6 +126,7 @@ form button {
             transform: translate(-50%);
     margin: auto;
     margin: 15px 0;
+    background-color: #e6e6e6;
   }
 }
 /*# sourceMappingURL=style.css.map */
