@@ -1,42 +1,92 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    box-sizing: border-box;
-  
-    background: transparent;
-  
-    font-family: inherit;
-    
-    text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #138073;
 }
-  
-ol, ul, li {
-    list-style:none;
-    display:block;
+
+legend {
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
 }
-  
-table {
-    border-collapse:collapse;
-    border-spacing:0
+
+form {
+  position: relative;
+  background-color: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px 15px 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-  
-a img {
-    border: none
+
+form input {
+  display: block;
+  width: max;
+  height: 64px;
+  margin: 15px 30px;
+  padding-left: 20px;
+  color: #c5c226;
 }
-  
-button, a {
-    cursor: pointer;
-    color: inherit
+
+form input[type='checkbox'] {
+  display: inline;
+  width: 20px;
+  height: 20px;
 }
-  
-textarea {
-    resize: none
+
+form input label {
+  display: inline;
+  margin: 0;
 }
-  
-button, input, textarea, select {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    border-radius: 0
+
+form spam.dataCkeck {
+  text-decoration: underline;
 }
+
+form button {
+  width: 150px;
+  height: 64px;
+  background-color: #39b69f;
+  border: none;
+  margin: 10px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  bo legend {
+    text-align: right;
+  }
+  form {
+    width: 100%;
+    padding: 100px 30px 50px;
+  }
+  form input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  legend {
+    text-align: center;
+  }
+  form {
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    margin: auto;
+    margin: 15px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
