@@ -41,7 +41,8 @@ form {
 		background-color: white;
 		border: 1px solid grey;
 
-		::placeholder {
+		&[type='text']::placeholder,
+		&[type='email']::placeholder {
 			// ez sehogy sem működik!!!!!!!
 			color: #138073;
 			opacity: 1;
