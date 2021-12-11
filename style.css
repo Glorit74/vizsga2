@@ -10,19 +10,21 @@
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #138073;
 }
 
+#root {
+  position: relative;
+}
+
 .title {
-  border: 1px solid fuchsia;
   font-size: 24px;
   letter-spacing: 0.2em;
   font-weight: 900;
 }
 
 form {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +32,7 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 100px 15px 50px;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -40,11 +42,9 @@ form input {
   display: block;
   width: 100%;
   height: 64px;
-  margin: 15px 30px;
   padding-left: 20px;
   background-color: white;
   border: 1px solid grey;
-  color: #138073;
 }
 
 form input ::-webkit-input-placeholder {
@@ -68,7 +68,7 @@ form input ::placeholder {
 }
 
 form input[type='checkbox'] {
-  margin: auto;
+  margin: auto 0;
   display: inline;
   width: 20px;
   height: 20px;
@@ -83,11 +83,12 @@ form .checkCont {
 form .checkCont label {
   display: inline;
   margin-left: 15px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 form .checkCont label spam.dataCkeck {
   text-decoration: underline;
+  font-weight: 600;
 }
 
 form button {
@@ -100,7 +101,7 @@ form button {
   color: white;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 480px) {
   body {
     background-color: #e6e6e6;
   }
@@ -109,24 +110,31 @@ form button {
         align-self: flex-end;
   }
   body form {
-    width: 100%;
     padding: 100px 30px 50px;
   }
   body form input {
     width: 100%;
+    margin: 15px 30px;
   }
 }
 
-@media screen and (min-width: 381px) {
+@media screen and (min-width: 481px) {
   form {
-    width: 80%;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
-    margin: auto;
-    margin: 15px 0;
+    position: absolute;
+    top: 50vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 100px 50px 30px;
     background-color: #e6e6e6;
+  }
+  form input {
+    margin: auto 30px auto 30px;
+  }
+  form input {
+    width: 60%;
+    margin: 15px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
