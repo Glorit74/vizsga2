@@ -43,7 +43,6 @@ form {
 
 		&[type='text']::placeholder,
 		&[type='email']::placeholder {
-			// ez sehogy sem működik!!!!!!!
 			color: #138073;
 			opacity: 1;
 		}
@@ -75,11 +74,15 @@ form {
 		padding: 2em 5em;
 		background-color: #39b69f;
 		border: none;
-		margin: 20px;
+		margin: 50px;
 
 		font-size: 12px;
 		letter-spacing: 0.2em;
 		color: white;
+
+		&:hover {
+			background-color: #138073;
+		}
 	}
 }
 
@@ -104,13 +107,13 @@ form {
 
 @media screen and (min-width: 481px) {
 	form {
+		box-sizing: border-box;
 		position: absolute;
-		top: 50vh;
-		margin-left: 20px;
-		margin-right: 20px;
-		transform: translateY(-50%);
-		padding: 100px 50px 30px;
+		top: 50vh; //50% nem működik
+		margin-right: 30px; //position -30 jobb oldalon és nincs bal margó
 
+		transform: translateY(-50%);
+		padding: 100px 50px 80px;
 		input {
 			margin: auto 30px auto 30px;
 		}
