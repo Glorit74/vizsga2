@@ -30,7 +30,6 @@
 form {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
 	align-items: center;
 
 	input {
@@ -46,17 +45,17 @@ form {
 			color: #138073;
 			opacity: 1;
 		}
+	}
 
-		&[type='checkbox'] {
+	.checkCont {
+		display: flex;
+
+		input[type='checkbox'] {
 			margin: auto 0;
 			display: inline;
 			width: 20px; // mitől responziv ez a két méret?????
 			height: 20px;
 		}
-	}
-
-	.checkCont {
-		display: flex;
 
 		label {
 			display: inline;
@@ -111,18 +110,24 @@ form {
 	}
 	form {
 		padding: 100px 50px 80px;
-		input {
-			margin: auto 30px auto 30px;
-		}
-
-		background-color: #e6e6e6;
 
 		input {
-			width: 450px;
+			max-width: 600px;
 			margin: 15px 0;
 		}
 	}
 	.checkCont {
-		width: 450px;
+		width: 600px;
+		margin: auto;
+
+		input[type='checkbox'] {
+			align-self: flex-start;
+		}
+
+		label {
+			display: inline-block;
+			width: 570px;
+			overflow-wrap: normal;
+		}
 	}
 }

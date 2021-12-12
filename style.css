@@ -32,7 +32,6 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -67,17 +66,17 @@ form input[type='text']::placeholder, form input[type='email']::placeholder {
   opacity: 1;
 }
 
-form input[type='checkbox'] {
-  margin: auto 0;
-  display: inline;
-  width: 20px;
-  height: 20px;
-}
-
 form .checkCont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+form .checkCont input[type='checkbox'] {
+  margin: auto 0;
+  display: inline;
+  width: 20px;
+  height: 20px;
 }
 
 form .checkCont label {
@@ -128,17 +127,23 @@ form button:hover {
   }
   form {
     padding: 100px 50px 80px;
-    background-color: #e6e6e6;
   }
   form input {
-    margin: auto 30px auto 30px;
-  }
-  form input {
-    width: 450px;
+    max-width: 600px;
     margin: 15px 0;
   }
   .checkCont {
-    width: 450px;
+    width: 600px;
+    margin: auto;
+  }
+  .checkCont input[type='checkbox'] {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .checkCont label {
+    display: inline-block;
+    width: 570px;
+    overflow-wrap: normal;
   }
 }
 /*# sourceMappingURL=style.css.map */
