@@ -123,14 +123,10 @@ form button:hover {
 }
 
 @media screen and (min-width: 481px) {
+  body {
+    background-color: #e6e6e6;
+  }
   form {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    position: absolute;
-    top: 50vh;
-    margin-right: 30px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
     padding: 100px 50px 80px;
     background-color: #e6e6e6;
   }
@@ -138,8 +134,11 @@ form button:hover {
     margin: auto 30px auto 30px;
   }
   form input {
-    width: 60%;
+    width: 450px;
     margin: 15px 0;
+  }
+  .checkCont {
+    width: 450px;
   }
 }
 /*# sourceMappingURL=style.css.map */
